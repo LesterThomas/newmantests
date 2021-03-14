@@ -4,14 +4,26 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
+            "name": "Error test",
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\runtests.js"
+            "program": "${workspaceFolder}\\source\\runtests.js",
+            "args": "nonfiletext"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Success test",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\source\\runtests.js",
+            "args": ".\tests\success-ComponentAutoTests.postman_collection.json"
         }
     ]
 }
