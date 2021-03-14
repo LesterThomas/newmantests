@@ -1,0 +1,15 @@
+{
+  "name": "newmantests",
+  "version": "1.0.0",
+  "description": "Automated tests using newman",
+  "repository": "https://github.com/LesterThomas/newmantests",
+  "main": "runtests.js",
+  "scripts": {
+    "test": "node runtests.js"
+  },
+  "author": "Lester Thomas",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "newman": "^5.2.2"
+  }
+}

@@ -1,0 +1,49 @@
+{
+	"info": {
+		"_postman_id": "f13a63fe-1327-4bad-9ef7-44d19304b4aa",
+		"name": "ComponentAutoTests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost/r1-productcatalog/tmf-api/partyRoleManagement/v4/partyRole",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response is an Array\", function () {\r",
+							"    pm.expect(pm.response.json()).to.be.an('array').but.not.an('object')\r",
+							"});\r",
+							"pm.test(\"Response time is less than 2\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/r1-productcatalog/tmf-api/partyRoleManagement/v4/partyRole",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"r1-productcatalog",
+						"tmf-api",
+						"partyRoleManagement",
+						"v4",
+						"partyRole"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
